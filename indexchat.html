@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat GPT API</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<div id="body">
+<body class="bg-gray-100">
+  <div class="max-w-2xl mx-auto p-4">
+    <h1 class="text-2xl font-bold mb-4">Chat GPT API</h1>
+
+    <div id="chat-box" class="bg-white p-4 h-96 overflow-y-auto border border-gray-300 rounded-md mb-4">
+      <!-- Chat messages will appear here -->
+    </div>
+
+    <form id="chat-form" class="flex">
+      <input
+        type="text"
+        id="user-input"
+        class="flex-grow border border-gray-300 p-2 rounded-md focus:outline-none"
+        placeholder="Escribe tu mensaje aquí"
+        required
+      />
+      <button
+        type="submit"
+        class="ml-2 bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600"
+      >
+        Publicar
+      </button>
+    </form>
+    
+    <a href="https://free-unoficial-gpt4o-mini-api-g70n.onrender.com/">
+    Pincha para resolver tus dudas.
+    </a>
+  </div>
+
+  <script>
+    const form = document.getElementById('chat-form');
+    const input = document.getElementById('user-input');
+    const chatBox = document.getElementById('chat-box');
+    let loadingMessage;
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const userMessage = input.value;
+      addMessage('You', userMessage);
+      input.value = '';
+
+      // Show loading indicator
+      loadingMessage = addMessage('GPT', 'Typing...');
+      
+      // Make API request
+      try {
+        const response = await fetch(`https://free-unoficial-gpt4o-mini-api-g70n.onrender.com/chat/?query=${userMessage}`, {
+          method: 'GET',
+          headers: {
+            'accept': 'application/json'
+          }
+        });
+        const data = await response.json();
+
+        // Replace loading message with API response
+        loadingMessage.textContent = `GPT: ${data.results || 'No response from the API'}`;
+      } catch (error) {
+        loadingMessage.textContent = 'GPT: Failed to fetch API';
+      }
+    });
+
+    function addMessage(sender, message) {
+      const messageElement = document.createElement('div');
+      messageElement.classList.add('mb-2', 'p-2', 'rounded-md', sender === 'You' ? 'bg-blue-200' : 'bg-gray-200');
+      messageElement.textContent = `${sender}: ${message}`;
+      chatBox.appendChild(messageElement);
+      chatBox.scrollTop = chatBox.scrollHeight; // Scroll to the bottom
+      return messageElement;
+    }
+  </script>
+</div>
+  <div id="boton">
+  <a href="index.html">VOLVER</a>
+  </div>
+  <style>
+  #boton{
+    text-align: center;
+  background-color: rgba(250, 235, 215, 0.886);
+  color: black;
+  display: grid;
+  grid-template-columns:3fr 3fr 3fr;
+  border: solid 5px beige;
+  padding: 15px;
+  }
+  #body{
+    background-color: #fece7f;
+  }
+</body>
+</html>
