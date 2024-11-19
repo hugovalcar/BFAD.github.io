@@ -17,7 +17,8 @@ head {
   background-image: url(/imagenes/csa.gif);
   background-size: cover;
   justify-content: center;
-  
+  items-align: center;
+  margin: auto;
 }
 #mensajes{
   text-align: center;
