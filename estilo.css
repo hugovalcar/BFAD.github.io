@@ -13,13 +13,12 @@ H1{
       background: linear-gradient(50deg, rgb(2, 214, 252), rgb(139, 230, 246), rgb(255, 255, 255));
 }
 
-head {
-  background-image: url(imagenes/csa.gif);
+.image {
   background-size: cover;
   justify-content: center;
-  items-align: center;
-  margin: auto;
+  
 }
+
 #mensajes{
   text-align: center;
 }
