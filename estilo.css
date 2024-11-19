@@ -13,10 +13,11 @@ H1{
       background: linear-gradient(50deg, rgb(2, 214, 252), rgb(139, 230, 246), rgb(255, 255, 255));
 }
 
-#imagen{
-    text-align: center;
-  height: 300;
-  margin: 30px;
+head {
+  background-image: url(/imagenes/csa.gif);
+  background-size: cover;
+  justify-content: center;
+  
 }
 #mensajes{
   text-align: center;
