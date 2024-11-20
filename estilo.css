@@ -32,7 +32,7 @@ textarea{
   color: black;
   display: grid;
   grid-template-columns:3fr 3fr 3fr;
-  border: solid 5px black;
+  border: solid 5px gris lobo;
   padding: 15px;
 }
 
@@ -41,7 +41,7 @@ textarea{
   color: black;
   display: grid;
   grid-template-columns:3fr 3fr 1fr;
-  border: solid 5px black;
+  border: solid 5px gris lobo;
   padding: 15px;
 
 }
