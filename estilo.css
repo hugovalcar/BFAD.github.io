@@ -29,6 +29,7 @@ textarea{
 #columnas1{
   text-align: center;
   background-color: #F8F8F8;
+  justify-content: space-between;
   color: black;
   display: grid;
   grid-template-columns:3fr 3fr 3fr;
