@@ -28,6 +28,7 @@ textarea{
 }
 #columnas1{
   text-align: center;
+  witdh: 30%;
   background-color: #F8F8F8;
   justify-content: space-between;
   color: black;
