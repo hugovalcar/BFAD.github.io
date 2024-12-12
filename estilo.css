@@ -31,7 +31,8 @@ textarea{
   background-color: #F8F8F8;
   color: black;
   display: grid;
-  grid-template-columns:repeat(3, 1fr);
+  grid-template-columns: 3fr, 3fr, 2fr;
+  gap: 20px,
   border: solid 5px gris lobo;
   padding: 15px;
   gap: 20px;
@@ -41,8 +42,7 @@ textarea{
   background-color: #F8F8F8;
   color: black;
   display: grid;
-  grid-template-columns:repeat(3, 1fr);
-  gap: 20px;
+  grid-template-columns: 3fr, 3fr, 2fr;
   border: solid 5px gris lobo;
   padding: 15px;
   
