@@ -39,13 +39,15 @@ textarea{
 }
 
 #columnas{
+  text-align: center;
   background-color: #F8F8F8;
   color: black;
   display: grid;
   grid-template-columns: 3fr, 3fr, 2fr;
+  gap: 20px,
   border: solid 5px gris lobo;
   padding: 15px;
-  
+  gap: 20px;
 
 }
 #calendario{
